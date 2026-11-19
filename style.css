@@ -1,0 +1,383 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f6f5f0;
+    color: #343b45;
+    line-height: 1.6;
+}
+
+/* Header */
+
+header {
+    background-color: #243247;
+    color: white;
+    padding: 30px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.college-name {
+    border-left: 4px solid #91b3a5;
+    padding-left: 15px;
+}
+
+.college-name h2 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.college-name p {
+    color: #cbd4df;
+    font-size: 14px;
+}
+
+.department-name {
+    text-align: right;
+}
+
+.department-name h1 {
+    font-size: 28px;
+    color: #d9e7df;
+}
+
+.department-name p {
+    color: #b9c8d3;
+    font-size: 14px;
+}
+
+/* Navigation */
+
+nav {
+    background-color: #527c78;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    font-size: 14px;
+}
+
+nav ul li a:hover {
+    background-color: #3e625e;
+}
+
+/* Dropdown */
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 190px;
+    top: 100%;
+    left: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+    z-index: 10;
+}
+
+.dropdown-menu li a {
+    color: #343b45;
+    padding: 12px 15px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #e5ece7;
+    color: #243247;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Welcome Section */
+
+.welcome {
+    background-color: #e5ece7;
+    padding: 75px 10%;
+    border-bottom: 1px solid #d2ddd6;
+}
+
+.welcome-text {
+    max-width: 800px;
+}
+
+.small-heading {
+    color: #527c78;
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.welcome h1 {
+    color: #243247;
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.welcome-text > p:not(.small-heading) {
+    max-width: 650px;
+    margin-bottom: 25px;
+    color: #505c65;
+}
+
+/* Button */
+
+.button {
+    display: inline-block;
+    background-color: #527c78;
+    color: white;
+    padding: 11px 22px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background-color: #243247;
+}
+
+/* Common Sections */
+
+.content-section,
+.contact-section {
+    width: 86%;
+    max-width: 1150px;
+    margin: 45px auto;
+    padding: 30px 35px;
+    background-color: white;
+    border: 1px solid #e5e5df;
+}
+
+.content-section h2,
+.contact-section h2 {
+    color: #243247;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.content-section h2::after,
+.contact-section h2::after {
+    content: "";
+    display: block;
+    width: 45px;
+    height: 3px;
+    background-color: #527c78;
+    margin-top: 8px;
+}
+
+.content-section > p {
+    margin-bottom: 15px;
+    color: #505c65;
+}
+
+/* Faculty Section */
+
+.section-intro {
+    color: #68737b;
+    margin-bottom: 25px;
+}
+
+/* Faculty directory layout */
+
+.faculty-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 35px;
+}
+
+.faculty-member {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 17px 5px;
+    border-bottom: 1px solid #dfe4e1;
+    gap: 12px;
+}
+
+.faculty-member h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #243247;
+}
+
+.faculty-member p {
+    font-size: 12px;
+    color: #527c78;
+    background-color: #e5ece7;
+    padding: 5px 9px;
+    border-radius: 3px;
+    white-space: nowrap;
+}
+
+/* Courses */
+
+.course-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 18px;
+    margin-top: 25px;
+}
+
+.course-item {
+    background-color: #f6f5f0;
+    padding: 20px;
+    border-top: 3px solid #527c78;
+}
+
+.course-item h3 {
+    color: #243247;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.course-item p {
+    font-size: 14px;
+    color: #626b72;
+}
+
+/* Activities */
+
+.activity-list {
+    margin-top: 25px;
+}
+
+.activity-item {
+    padding: 18px 20px;
+    margin-bottom: 15px;
+    border-left: 3px solid #527c78;
+    background-color: #f6f5f0;
+}
+
+.activity-item h3 {
+    color: #243247;
+    margin-bottom: 5px;
+}
+
+.activity-item p {
+    color: #626b72;
+    font-size: 14px;
+}
+
+/* Contact */
+
+.contact-section {
+    background-color: #e5ece7;
+}
+
+.contact-section p {
+    margin: 10px 0;
+}
+
+.contact-section a {
+    color: #3e625e;
+    text-decoration: none;
+}
+
+.contact-section a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+
+footer {
+    background-color: #243247;
+    color: #d9e1e8;
+    text-align: center;
+    padding: 22px;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+
+@media (max-width: 850px) {
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .department-name {
+        text-align: left;
+    }
+
+    .department-name h1 {
+        font-size: 25px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li a {
+        text-align: center;
+    }
+
+    .dropdown-menu {
+        position: static;
+        width: 100%;
+    }
+
+    .faculty-list {
+        grid-template-columns: 1fr;
+    }
+
+    .course-list {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .welcome h1 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .content-section,
+    .contact-section {
+        width: 92%;
+        padding: 22px;
+    }
+
+    .course-list {
+        grid-template-columns: 1fr;
+    }
+
+    .faculty-member {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .welcome {
+        padding: 50px 7%;
+    }
+
+    .welcome h1 {
+        font-size: 28px;
+    }
+}
